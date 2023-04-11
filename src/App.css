@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+header img {
+  height : 120px;
+  width : auto
+}
+
+.section-presentation{
+  height : calc(100vh - 120px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-presentation>div{
+  background-color: rgba(0, 0, 0, 0.271);
+}
+
+.background-footer{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background-footer > div{
+  background-color: rgba(0, 0, 0, 0.755);
+}
+.img-right-side{
+  height : 80%;
+  width : 80%;
+}
+.section-blue{
+  height : 200px;
+  background-color: rgb(127, 192, 226);
+}
+.section-blue img{
+  height : 100px;
+  width  :auto;
+  margin : 0px;
+  padding : 0px;
+}
