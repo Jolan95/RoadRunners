@@ -36,7 +36,7 @@ export default function Header(props) {
                 <Link to="/demenagement"  className={(active === "demenagement"? "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500" : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent")+"block py-2 pl-3 pr-4 dark:text-white rounded md:p-0"}>Déménagement</Link>
               </li>
               <li>
-                <Link to="/devis"  className={(active === "devis"? "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500" : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent")+"block py-2 pl-3 pr-4 dark:text-white rounded md:p-0"}>Devis</Link>
+                <Link to="/devis"  className={(active === "devis"? "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500" : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent")+"block py-2 pl-3 pr-4 dark:text-white rounded md:p-0"}>Contact</Link>
               </li>
             </ul>
           </div>

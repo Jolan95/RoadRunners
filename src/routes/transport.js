@@ -58,7 +58,7 @@ export default function Transport() {
 		        	  	Pour un besoin de dernière minute, vous pouvez compter sur Road Express afin d'opérer un transport de qualité, rapide et sécure, en béneficiant de la même qualité logistique qu'un transport programmé.
 		        	</p>
 		        	<p className='mt-2'> 
-		        	  	Road Runners garantit un service de qualité à ses collaborateurs en garantissant l'optimisation de la gestion de leurs transports express dans toute la France !
+		        	  	Road Runners certifie un service de qualité à ses collaborateurs en garantissant l'optimisation de la gestion de leurs transports express dans toute la France !
 		        	</p>
 	  	        </div>
             </div>

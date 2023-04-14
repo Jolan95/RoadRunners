@@ -8,12 +8,13 @@ export default function Devis() {
     <>
         <Header active="devis"></Header>
         <div className='px-5  sm:p-20'>
-          <h1 className='text-2xl font-semibold'>Demande de devis</h1>
-          <div className='wrapper-form'>
-            <Form>
-            </Form>
-          </div>
+            <h1 className='text-2xl font-semibold'>Demande de contact</h1>
+            <div className='wrapper-form'>
+                <Form>
+                </Form>
+            </div>
         </div>
+        
         <Footer></Footer>
     </>
   )
