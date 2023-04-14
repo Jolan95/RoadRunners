@@ -32,17 +32,21 @@ header img {
   background-color: rgba(0, 0, 0, 0.785);
 }
 strong{
-  font-weight : 500
+  font-weight : normal;
 }
-.img-right-side{
+/* .img-right-side{
   height : 80%;
   width : 80%;
-}
+} */
 .section-blue img{
   height : 100px;
   width  :auto
 }
-
+textarea{
+  min-width : 250px;
+  max-width : 400px;
+  width : 100%;
+}
 
 .button-know-more{
   background-color: transparent;
@@ -57,15 +61,24 @@ padding : 10px ;
   border-radius: 12px;
   border : 1px solid black
 }
+.button-devis{
+  padding : 12px 8px;
+  background-color: white;
+  border : 0px;
+  border-radius: 10px;
+  color : black;
+  font-weight: 600;
+}
+.button-devis:hover{
+  transform: scale(1.1);
+}
 body{
   background-color: rgb(234, 233, 233);
 }
 .image-reverse{
     transform: scaleX(-1);
 }
-.image-med{
-  width : 70%
-}
+
 @media all and (min-width : 640px){
   .section-blue{
     background-color: rgb(127, 192, 226);
@@ -92,10 +105,9 @@ body{
 }
 
 .link_wrapper a{
-  
   border-radius: 10px;
   display: block;
-  width: 250px;
+  width: 230px;
   height: 50px;
   line-height: 50px;
   font-weight: bold;
@@ -142,3 +154,8 @@ body{
   border: 3px solid  rgb(25, 25, 26);
   right: -25%;
 }
+input{
+  max-width: 90vw;;
+}
+
+

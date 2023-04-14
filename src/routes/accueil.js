@@ -1,6 +1,5 @@
 import Header from "../components/header";
 import bgTruck from "../image/truck.jpg";
-import Footer from "../components/footer";
 import truckMercedes from "../image/mercedes-blanc.png";
 import Bandeau from "../components/bandeau.js";
 import AlertDangerous from "../components/alert-dangerous";
@@ -23,19 +22,19 @@ export default function Accueil() {
 			</div>
 		</div>
 	</section> 
-	<div className="lg:grid lg:grid-cols-2 max-w-screen-xl mx-auto mx-7 mt-14 md:mx-10 xl:mx-auto">
-	  	<div className=" text-lg text-center">
-	  		<h2 className="text-center text-3xl font-semibold mb-4">SOCIÉTÉ PROFESSIONNELLE DE TRANSPORT </h2>
+	<div className="lg:grid lg:grid-cols-2 max-w-screen-xl mb-3 md:mb-0 mx-7 mt-14 md:mx-10 xl:mx-auto">
+	  	<div className=" md:text-center text-md md:text-lg">
+	  		<h2 className=" text-xl md:text-2xl  font-bold mb-4">SOCIÉTÉ PROFESSIONNELLE DE TRANSPORT </h2>
 	  		{/* <p className="text-center font-bold">Partenaire de confiance pour tous transports de marchandise !</p> */}
-			<p className="text-center"> 
+			<p className=""> 
 			  	Road Runners, votre partenaire confiance coordonne vos opérations de transports routiers express et réguliers dans toute la région <strong>Ile de France</strong> et <strong>Picardie</strong> effectués par ses <strong>Runners</strong> en toute fiabilité.<br/>
 			</p>
-			<h3 className="mt-4 mb-1  font-bold">Transport Régulier</h3>
+			<h3 className="mt-4 mb-1  font-semibold text-lg md:text-xl">Transport Régulier</h3>
 			Road Runner répond à vos besoins de livraisons régulières et programmés.
-			Optez pour la sérénité en confiant vos livraisons de marchandises régulières dans des véhicules spécialement dédiés à votre transport.
-			<h3 className="mt-4 mb-1 font-bold">Transport Express</h3>
+			Optez pour la sérénité en confiant vos livraisons de marchandises régulières dans des véhicules spécialement dédiés à vos transport.
+			<h3 className="mt-4 mb-1 font-semibold text-lg md:text-xl">Transport Express</h3>
 			Nos Runners assure en toute sécurité et rapidité vos courses à la demande, pour des besoins express dans toute la France.
-			<div className="flex justify-center mt-5 ">
+			<div className="flex md:justify-center mt-5">
 				<div className="wrapper">
   					<div className="link_wrapper">
   					  	<Link to="/devis">Demande de Devis</Link>
@@ -51,36 +50,37 @@ export default function Accueil() {
 	  	<div className="hidden lg:block">
 			<img className="image-reverse" src={truckMercedes} alt="mercedes"></img>
 	  	</div>
+	</div>
+	<div className="pt-5 mx-6">
+	<AlertDangerous></AlertDangerous>
 	</div>  
-	  <AlertDangerous></AlertDangerous>
-	  <Bandeau></Bandeau>
-	  <div className="lg:grid lg:grid-cols-2 max-w-screen-xl mx-auto mx-7 mt-14 md:mx-10 xl:mx-auto mb-8">
-	  	<div className="hidden lg:flex justify-center items-center">
-			<img className="image-med" src={Map} alt="map"></img>
-	  	</div>
-		<div className="md:flex md:items-center">
-	  		<div className="text-lg text-center">
-	  			<h2 className="text-center text-3xl font-semibold mb-4 lg:text-left">SECTEUR D'ACTIVIÉ</h2>
-				<div className="text-center lg:text-left"> 
-				<h3 className="mt-4 mb-1 font-bold ">Ile de France et Picardie</h3>
-					Basé en Ile de France, 
-				  	Road Runners est spécialisé dans le transport routier sur la région Ile de France et Picardie. Vous pouvez nous y confier vos courses régulières, vos courses Express ou même vos déménagements.<br/>
-				<h3 className="mt-4 mb-1 font-bold">Transport National</h3>
-				Besoin d'un transport de marchandise vers lRoad Runners assure vos courses Express ou régulières dans toutes l'héxagone.
+	<Bandeau></Bandeau>
+	<div className="bg-white mt-6 md:mt-0">
+		<div className="lg:grid lg:grid-cols-2 max-w-screen-xl mx-auto mx-7 py-7 lg:py-14  md:mx-10 xl:mx-auto mb-8 text-md md:text-lg">
+			<div className="hidden lg:flex justify-center items-center">
+				<img className="h-auto xl:w-9/12 lg:w-11/12" src={Map} alt="map"></img>
+			</div>
+			<div className="md:flex md:items-center mx-4">
+				<div className="md:text-center lg:text-left">
+					<h2 className=" font-bold mb-4  text-xl md:text-2xl">SECTEUR D'ACTIVITÉ</h2>
+					<div className=""> 
+						<h3 className="mt-4 mb-1 font-semibold text-lg md:text-xl ">Ile de France et Picardie</h3>
+						Basé en Ile de France, 
+				  		Road Runners est spécialisé dans le transport routier sur la région Ile de France et Picardie. Vous pouvez nous y confier vos courses régulières, vos courses Express ou même vos déménagements.<br/>
+						<h3 className="mt-4 mb-1 font-semibold text-lg md:text-xl">Transport National</h3>
+						Besoin d'un transport de marchandise vers lRoad Runners assure vos courses Express ou régulières dans toutes l'héxagone.
+					</div>
 				</div>
-	  		</div>
+			</div>
 		</div>
 	</div>
-	{/* <div className="h-3 section-blue w-full"> */}
-	{/* </div>	 */}
-	<div className="bg-white">
-	  <div className="lg:grid lg:grid-cols-2 max-w-screen-xl mx-auto mx-7 mt-14 md:mx-10 xl:mx-auto py-20">
-	  	<div className=" text-lg text-center">
-	  		<h2 className="text-center text-3xl font-semibold mb-4 md:text-left">DEMENAGEMENT</h2>
-			<p className="text-center lg:text-left"> 
+	<div className="lg:grid lg:grid-cols-2 max-w-screen-xl mx-auto mx-7 md:mx-10 xl:mx-auto pb-7 lg:py-14 text-md md:text-lg ">
+	  	<div className=" mx-4">
+	  		<h2 className="  font-bold mb-4 text-xl md:text-2xl">DEMENAGEMENT</h2>
+			<p className=" md:text-xl"> 
 				Road Runners et ses équipes de déménageurs vous propose un service de déménagement de qualité dans toute la région Ile de France et Picardie. <br/>Vous pouvez nous confier l'acheminement de vos biens. Nos équipes experts de déménageurs s'occupent du chargement et du déchargement en toute sécurité de vos biens que nos Runners acheminent jusqu'à votre nouveau domicile.<br/>
 			</p>
-			<div className="flex justify-center mt-8 lg:justify-start ">
+			<div className="flex mt-8">
 				<div className="wrapper">
   					<div className="link_wrapper">
   					  	<Link to="/devis">Demande de Devis</Link>
@@ -93,28 +93,28 @@ export default function Accueil() {
 				</div>
 			</div>
 	  	</div>
-	  	<div className="hidden lg:flex justify-center items-center">
-			<img className="image-med" src={Demenagement} alt="demenagement"></img>
-	  	</div>
+	 	<div className="hidden lg:flex justify-center items-end xl:items-center ">
+			<img className="image-med h-auto xl:w-9/12 lg:w-11/12" src={Demenagement} alt="demenagement"></img>
+	 	</div>
 	</div>
-	</div>  
-
 	<div className="background-footer filter-opacity" style={{backgroundImage: `url(`+Route+`)`, }}>
 		<div className="text-white">
-			<h2 className="text-center text-3xl font-semibold pt-10">Demande de contact</h2>
-	  		<div className="lg:grid text-white lg:grid-cols-2 max-w-screen-xl mx-auto mx-7  md:mx-10 xl:mx-auto py-20">
-				<div className="">
+			<h2 className="text-center font-bold pt-7 text-xl md:text-2xl">DEMANDE DE CONTACT</h2>
+	  		<div className="lg:grid text-white lg:grid-cols-2 max-w-screen-xl mx-4 md:mx-7  md:mx-10 xl:mx-auto pb-10 pt-10">
+				<div className="flex justify-center lg:justify-start">
 					<Form></Form>
 	  			</div>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d518509.0407599505!2d2.0907307491785154!3d48.97600739962165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6447cebb370cd%3A0x7275346b36790558!2s24%20Rue%20Roger%20Salengro%2C%2095270%20Saint-Martin-du-Tertre!5e0!3m2!1sfr!2sfr!4v1681316990363!5m2!1sfr!2sfr" width="600" height="450" allowFullScreen="" title="localisation" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>	
+				<div className="hidden lg:flex justify-center">
+				<iframe className="hidden lg:block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d518509.0407599505!2d2.0907307491785154!3d48.97600739962165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6447cebb370cd%3A0x7275346b36790558!2s24%20Rue%20Roger%20Salengro%2C%2095270%20Saint-Martin-du-Tertre!5e0!3m2!1sfr!2sfr!4v1681316990363!5m2!1sfr!2sfr" width="450" height="450" allowFullScreen="" title="localisation" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>	
+				</div>
 	  		</div>
 			<footer>
     			<div className=" text-center text-white">
-    			    <div className="container px-6 pt-6">
-    			      <div className="mb-6 text-5xl flex justify-center">
+    			    <div className="px-6 pt-6">
+    			      <div className="mb-4 text-xl sm:text-3xl md:text-4xl lg:text-5xl  flex justify-center">
     			          rrunners@gmail.com
     			      </div>
-    			      <div className="mb-6 text-3xl flex justify-center">
+    			      <div className="mb-4 text-lg text-2xl  lg:text-3xl flex justify-center">
     			          06.34.23.27.10
     			      </div>
     			    </div>
@@ -126,8 +126,6 @@ export default function Accueil() {
    			</footer>
 		</div>
 	</div>
-
-
 	</>
   )
 }

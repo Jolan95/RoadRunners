@@ -13,16 +13,11 @@ export default function Form() {
 
     const handleSubmit = (e)=> {
         e.preventDefault()
-        if(!name ){
-            if(!phone && !email){
-                setAlert({message : "Veuillez renseigner un numéro de téléphone ou/et une adresse mail", type:"ERROR"})
-                return false
-            }
-            if(!phone && preference === "telephone"){
-                setAlert({message : "Veuillez renseigner votre numéro de téléphone ou modifiez vos préférences de prise de contact", type:"ERROR"})
-            }
-            if(!phone && preference === "telephone"){
-                setAlert({message : "Veuillez renseigner votre numéro de téléphone ou modifiez vos préférences de prise de contact", type:"ERROR"})
+        if(name && phone && email){
+            if(check){
+                setAlert({message : "Demande de devis envoyé avec succès", type:"SUCCES"})
+            }else {
+                setAlert({message : "Veuillez acceptez le traitement de vos informations personnelles", type:"ERROR"})
             }
         } else {
             setAlert({message : "Veuillez renseigner votre nom complet", type:"ERROR"})
@@ -31,36 +26,37 @@ export default function Form() {
         console.log(check)
         console.log(preference)
         console.log(message)
-
     }
 
   return (
    <div className="wrapper-form">
         <form onSubmit={(e) => {handleSubmit(e)}}> 
-            <div>   
-                <div>Nom</div>
-                <input  className='text-black w-80 h-8 rounded' type="name" required onChange={(e)=> {setName(e.target.value)}} placeholder="Nom complet"></input>
+            <span className={' block p-2 rounded '+(alert.type === null? "hidden" : (alert.type === "ERROR"? "bg-red-500" : "bg-green-600"))}>{alert.message}</span>
+            <div className='mt-2'>   
+                <div>Nom*</div>
+                <input  className='text-black w-80 h-8 rounded p-2' type="name" required onChange={(e)=> {setName(e.target.value)}} placeholder="Nom complet"></input>
             </div>
-            <div>
-                <div>Telephone</div>
-                <input className='text-black w-80 h-8 rounded' type="tel" required onChange={(e)=> {setPhone(e.target.value)}} placeholder="Numéro de téléphone"></input>
+            <div className='mt-2'>
+                <div>Telephone*</div>
+                <input className='text-black w-80 h-8 rounded p-2' type="tel" required onChange={(e)=> {setPhone(e.target.value)}} placeholder="Numéro de téléphone"></input>
             </div>
-            <div>
-                <div>Email</div>
-                <input  className='text-black w-80 h-8 rounded' type="email" required onChange={(e)=> {setEmail(e.target.value)}} placeholder="Email"></input>
+            <div className='mt-2'>
+                <div>Email*</div>
+                <input  className='text-black w-80 h-8 rounded p-2' type="email" required onChange={(e)=> {setEmail(e.target.value)}} placeholder="Email"></input>
             </div>
-            <div className='mb-3'>
+            <div className='mt-2'>
+                <div>Message</div>
+                <textarea className='text-black  h-40 rounded p-2' type="textarea" onChange={(e)=> {setMessage(e.target.value)}} placeholder="Votre message (facultatif)"></textarea>
+            </div>
+            <div className='my-2'>
                 <div>Je préfère être contacté par :</div>
-                <input type="radio" checked onChange={(e)=> {setPreference("telephone")}} name="contact" value="email"/><label>Telephone</label>
-                <input type="radio" onChange={(e)=> {setPreference("email")}} name="contact" value="email"/><label>Email</label>
+                <input type="radio" checked onChange={(e)=> {setPreference("telephone")}} name="contact" value="email"/><label className='pl-1'>Telephone</label>
+                <input type="radio" className='ml-2'  onChange={(e)=> {setPreference("email")}} name="contact" value="email"/><label className='pl-1'>Email</label>
             </div>
-            <div>
-                <textarea className='text-black w-80 h-80 rounded' type="textarea" onChange={(e)=> {setMessage(e.target.value)}} placeholder="Votre message"></textarea>
+            <div className='my-2 text-sm md:text-md'>
+                <input className='mr-1' type="checkbox" onClick={(e)=> {setCheck(!check)}}></input>J'accepte mes données soient traitées par Road Runners et d'être contacté
             </div>
-            <div>
-                <input type="checkbox" onClick={(e)=> {setCheck(!check)}}></input>J'accepte mes données soient traitées par Road Runners et d'être contacté
-            </div>
-            <button type='submit' className='rounded bg-slate-600 py-4 px-4'>
+            <button  type='submit' className='rounded text-white bg-slate-600 py-2 px-4'>
                 Envoyer
             </button>
         </form>

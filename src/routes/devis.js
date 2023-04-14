@@ -1,17 +1,18 @@
 import React from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Form  from '../components/form'
 
 export default function Devis() {
   return (
     <>
         <Header active="devis"></Header>
-          <h1>Demande de devis</h1>
-        <div className='wrapper-form'>
-          <form>
-            Demande de contact
-          </form>
-          
+        <div className='px-5  sm:p-20'>
+          <h1 className='text-2xl font-semibold'>Demande de devis</h1>
+          <div className='wrapper-form'>
+            <Form>
+            </Form>
+          </div>
         </div>
         <Footer></Footer>
     </>
