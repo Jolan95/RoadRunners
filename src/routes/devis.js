@@ -8,7 +8,10 @@ import IconTelephone from "../image/icons/tel.webp"
 import IconMail from "../image/icons/mail.webp"
 
 
+
 export default function Devis() {
+
+
   return (
     <>
         <Header active="devis"></Header>
@@ -22,7 +25,7 @@ export default function Devis() {
                         </h1>
                         <div>
                             <div className='flex items-center'>
-                                <img src={IconTelephone} alt="icon" className='h-4 w-auto'></img> : 06.34.23.15.43
+                                <img src={IconTelephone} alt="icon" className='h-4 w-auto'></img> : 06.68.58.43.76
                             </div>
                             <div className='flex items-center'>
                                 <img src={IconMail} alt="icon" className='h-4 w-auto'></img> : RRUNNERS@GMAIL.COM

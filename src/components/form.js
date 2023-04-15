@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useState } from 'react'
+
 
 export default function Form() {
     
@@ -10,28 +11,43 @@ export default function Form() {
     const [message, setMessage] = useState("")
     const [check, setCheck] = useState(false);
     const [alert, setAlert] = useState({message: "", type : null}) 
+    const [loading, setLoading] = useState(false)
 
     const handleSubmit = (e)=> {
         e.preventDefault()
         if(name && phone && email){
             if(check){
-                setAlert({message : "Demande de devis envoyé avec succès", type:"SUCCES"})
+                setLoading(true)
+                var myInit = { 
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({name, phone, email, message, preference, check})
+                }
+                fetch("https://road-runners.herokuapp.com/mail",myInit)
+                .then(res => res.json())
+                .then((response) => {
+                    setLoading(false)
+                    setAlert({message : response.message , type:"SUCCESS"})
+                    console.log(response)
+                }
+                ).catch(err => {
+                    setAlert({message : err.message , type:"ERROR"})
+                    setLoading(false)
+                    console.log(err)
+                })
             }else {
-                setAlert({message : "Veuillez acceptez le traitement de vos informations personnelles", type:"ERROR"})
+                setAlert({message : "Veuillez accepter le traitement de vos informations personnelles", type:"ERROR"})
             }
         } else {
-            setAlert({message : "Veuillez renseigner votre nom complet", type:"ERROR"})
+            setAlert({message : "Veuillez renseigner les information obligatoires.", type:"ERROR"})
         }
-        console.log(name)
-        console.log(check)
-        console.log(preference)
-        console.log(message)
     }
 
   return (
    <div className="wrapper-form">
         <form onSubmit={(e) => {handleSubmit(e)}}> 
-            <span className={' block p-2 rounded '+(alert.type === null? "hidden" : (alert.type === "ERROR"? "bg-red-500" : "bg-green-600"))}>{alert.message}</span>
+            <span className={' block p-3 rounded w-fit	text-white mt-2 '+(alert.type === null? "hidden" : (alert.type === "ERROR"? "bg-red-500" : "bg-green-600"))}>{alert.message}</span>
             <div className='mt-2'>   
                 <div>Nom*</div>
                 <input  className='text-black w-80 h-8 rounded p-2' type="name" required onChange={(e)=> {setName(e.target.value)}} placeholder="Nom complet"></input>
@@ -56,7 +72,7 @@ export default function Form() {
             <div className='my-2 text-sm md:text-md'>
                 <input className='mr-1' type="checkbox" onClick={(e)=> {setCheck(!check)}}></input>J'accepte mes données soient traitées par Road Runners et d'être contacté
             </div>
-            <button  type='submit' className='rounded text-white bg-slate-600 py-2 px-4'>
+            <button  type='submit' disabled={loading ? true : false} className='rounded text-white bg-slate-600 py-2 px-4'>
                 Envoyer
             </button>
         </form>

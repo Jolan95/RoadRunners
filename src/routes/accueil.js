@@ -115,7 +115,7 @@ export default function Accueil() {
     			          rrunners@gmail.com
     			      </div>
     			      <div className="mb-4 text-lg text-2xl  lg:text-3xl flex justify-center">
-    			          06.34.23.27.10
+					  	06.68.58.43.76
     			      </div>
     			    </div>
     			    <div
