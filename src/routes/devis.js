@@ -3,9 +3,9 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import Form  from '../components/form'
 import Iframe from "../components/iframe"
-import IconLocalisation from "../image/icons/localisation.png"
-import IconTelephone from "../image/icons/tel.png"
-import IconMail from "../image/icons/mail.png"
+import IconLocalisation from "../image/icons/localisation.webp"
+import IconTelephone from "../image/icons/tel.webp"
+import IconMail from "../image/icons/mail.webp"
 
 
 export default function Devis() {

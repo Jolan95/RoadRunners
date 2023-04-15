@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '../components/header'
-import BgDemenagement from "../image/carton.jpg"
+import BgDemenagement from "../image/carton.webp"
 import Footer from '../components/footer'
 import { Link } from 'react-router-dom'
-import Carton from "../image/demenagement-carton.jpg"
+import Carton from "../image/demenagement-carton.webp"
 
 export default function Demenagement() {
   return (
@@ -12,7 +12,7 @@ export default function Demenagement() {
         <section className='section-presentation' style={{backgroundImage: `url(`+BgDemenagement+`)`, }}>
 		      <div className='h-full flex items-center justify-center'>
 		      	<div className="text-center">
-              	<h1 className='md:text-8xl text-4xl text-cyan-300 '>Déménagement </h1>
+              	<h1 className='md:text-8xl text-4xl text-cyan-500 '>Déménagement </h1>
 		      	    <h2 className='md:text-4xl text-2xl text-white'>La clé d'un déménagement réussi</h2>
 		      	</div>
 		      </div>

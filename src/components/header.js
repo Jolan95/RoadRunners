@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import Logo2 from "../image/logoRR2.jpg"
+import Logo2 from "../image/logoRR2.webp"
 
 export default function Header(props) {
    const [displayMenu, setDisplayMenu] = useState(false)
@@ -13,7 +13,7 @@ export default function Header(props) {
   return (
     <header>
         <nav  className="bg-white border-gray-200">
-        <div  className="max-w-screen-2xl flex flex-wrap items-center justify-between px-3">
+        <div  className="flex flex-wrap items-center justify-between px-3">
           <Link to="/"  className="flex items-center">
           <img src={Logo2} alt="logo"></img>
           </Link>

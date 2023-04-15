@@ -1,12 +1,12 @@
 import Header from "../components/header";
-import bgTruck from "../image/truck.jpg";
-import truckMercedes from "../image/mercedes-blanc.png";
+import bgTruck from "../image/truck.webp";
+import truckMercedes from "../image/mercedes-blanc.webp";
 import Bandeau from "../components/bandeau.js";
 import AlertDangerous from "../components/alert-dangerous";
-import Route from '../image/routes.jpg'
-import Map from "../image/map.jpg"
+import Route from '../image/routes.webp'
+import Map from "../image/map.webp"
 import { Link } from "react-router-dom";
-import Demenagement from "../image/demenageurs.jpeg"
+import Demenagement from "../image/demenageurs.webp"
 import Form from "../components/form"
 
 
@@ -17,7 +17,7 @@ export default function Accueil() {
 	<section className='section-presentation' style={{backgroundImage: `url(`+bgTruck+`)`, }}>
 		<div className='h-full flex items-center justify-center'>
 			<div className="text-center">
-				<h1 className='md:text-8xl text-4xl text-cyan-300'>ROAD RUNNERS</h1>
+				<h1 className='md:text-8xl text-4xl text-cyan-500'>ROAD RUNNERS</h1>
 				<h2 className='md:text-4xl text-2xl  text-white'>La clé d'un transport réussi</h2>
 			</div>
 		</div>

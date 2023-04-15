@@ -1,9 +1,8 @@
 import React from 'react'
-import IconTruck from "../image/icons/truck.png"
-import IconCare from "../image/icons/care.png"
-import IconPrice from "../image/icons/price.png"
-import IconRespect from "../image/icons/respect.png"
-import IconTrust from "../image/icons/trust.png"
+import IconTruck from "../image/icons/truck.webp"
+import IconPrice from "../image/icons/price.webp"
+import IconRespect from "../image/icons/respect.webp"
+import IconTrust from "../image/icons/trust.webp"
 
 export default function Bandeau() {
   return (

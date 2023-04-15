@@ -1,13 +1,12 @@
 import React from 'react'
 import Header from '../components/header'
-import BgArea from "../image/area.jpg"
-import France from "../image/france.png"
+import BgArea from "../image/area.webp"
+import France from "../image/france.webp"
 import Footer from '../components/footer'
 import { Link } from 'react-router-dom'
-import Cartons from "../image/icons/cartons.png"
-import Devis from "../image/icons/devis.png"
-import FranceTrans from "../image/france.png"
-import Truck from "../image/icons/truck.png"
+import Cartons from "../image/icons/cartons.webp"
+import Devis from "../image/icons/devis.webp"
+import Truck from "../image/icons/truck.webp"
 
 export default function Area() {
   return (
@@ -16,7 +15,7 @@ export default function Area() {
 		<section className='section-presentation' style={{backgroundImage: `url(`+BgArea+`)`, }}>
 			  <div className='h-full flex items-center justify-center'>
 			  	<div className="text-center">
-			  	<h1 className='md:text-8xl text-4xl  text-cyan-300 '>Zone d'intervention</h1>
+			  	<h1 className='md:text-8xl text-4xl  text-cyan-500 '>Zone d'intervention</h1>
 			  	<h2 className='md:text-4xl text-2xl  text-white'>Transport professionnel dans toute la France</h2>
 			  	</div>
 			  </div>
@@ -69,7 +68,7 @@ export default function Area() {
 	</div>
 	<div className="flex justify-center">
 	  	<div className="circle">
-			<div className="flex justify-center"><img alt="icone" src={FranceTrans}></img></div>
+			<div className="flex justify-center"><img alt="icone" src={France}></img></div>
 			<div className="font-semibold lg:font-bold text-center">Transport dans toute la France</div>
 	  	</div>
 	</div>

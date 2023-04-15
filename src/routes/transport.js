@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '../components/header'
-import BgChargement from '../image/chargement.jpg'
+import BgChargement from '../image/chargement.webp'
 import Footer from '../components/footer'
-import Camion from "../image/camion-route.jpg"
-import Camion2 from "../image/camion2.jpg"
+import Camion from "../image/camion-route.webp"
+import Camion2 from "../image/camion2.webp"
 import { Link } from 'react-router-dom'
 import Bandeau from '../components/bandeau'
 import AlertDangerous from '../components/alert-dangerous'
@@ -15,7 +15,7 @@ export default function Transport() {
         <section className='section-presentation' style={{backgroundImage: `url(`+Camion+`)`, }}>
 		    <div className='h-full flex items-center justify-center'>
 		      	<div className="text-center">
-              	    <h1 className='md:text-8xl text-4xl text-cyan-300 '>TRANSPORT</h1>
+              	    <h1 className='md:text-8xl text-4xl text-cyan-500 '>TRANSPORT</h1>
 		      	    <h2 className='md:text-4xl text-2xl text-white'>Expert du transport</h2>
 		      	</div>
 		    </div>

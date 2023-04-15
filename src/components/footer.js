@@ -1,5 +1,5 @@
 import React from 'react'
-import Route from "../image/routes.jpg"
+import Route from "../image/routes.webp"
 
 export default function Footer() {
   return (
