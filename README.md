@@ -8,7 +8,7 @@ Road Runner est une entreprise de transport situé en Ile de France, qui m'a sol
  
 
 Stack : 
-- Next.js
+- React.js
 - Node.js + Express (Back end)
 - Tailwind
 - Netlify
